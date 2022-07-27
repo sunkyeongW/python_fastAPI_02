@@ -3,7 +3,7 @@ from email.policy import default
 from enum import unique
 from lib2to3.pgen2.token import STRING
 from sqlalchemy import Boolean, Column, Integer, String
-from database import Base
+from app.database import Base
 
 class User(Base):     #dayabase.py에 있는 부모클래스
     __tablename__ = "user"
