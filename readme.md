@@ -44,6 +44,7 @@
     PyMySQL : MySQL연결을 위한 드라이버.
 
 
+
 # Form
     HTML의 태그.
     미디어 타입 : application/x-www-form-urlencoded
@@ -80,6 +81,30 @@
             ) -> None:
             super().__init__(
                 status_code, detail, headers)
+
+# DI (Dependency Injection)
+    의존성 주입 - 객체를 직접 생성하는 방식이 아닌 외부에서 생성하여 주입 시켜주는 방식.
+
+    class, pydantic,DI로 주입.
+
+# 웹 인증
+    1. http basic : fastapi.security 모듈과 의존성 삽입(Depends)을 이용.
+    2. OAuth2 : 토큰을 발급하고 인증하는 오픈 스탠다드 프로토콜.
+        JWT : 웹 토큰.
+        - python-jose bcrypt 라이브러리 설치.
+
+# bg 작업
+    BackgroundTasks : 작업 수행 후 전송되는 이메일 알림, 데이터 처리 할 때 유용.
+    .add_tesk() 인수로 수신.
+
+# 미들 웨어
+    서버와 애플리케이션 사이를 중계하는 프로그램.
+    클라이언트(브라우저)<-http-> 웹 서버 <-cgi-> 웹 애플리케이션(또는 WAS)
+
+    # CORS(Cross-Origin Resource Sharing)
+        SOP(출처가 동일한 프로포콜,포트,도메일에서만 자원을 사용가능 하도록 하는 보안정책)을 위반한 에러.
+        
+
 
 
 
