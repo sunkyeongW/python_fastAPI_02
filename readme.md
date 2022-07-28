@@ -13,24 +13,36 @@
 # MySQL
     다른 유저가 빌드한 이미지를 설치 없이 바로 사용할 수 있는 기능.
 
+    도커 생성
     $ docker run --name fastapi-mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 
     --name : 컨테이너 이름
     -e : 환경 변수
     -d : 백그라운드 모드
-    mysql : 이미지 이름
+    -P : port
+    mysql8.0 : 이미지 이름
     --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci : 컨테이너를 실행할 때 사용하는 명령어.
 
     접속 방법
     $ docker exec -it fastapi-mysql mysql -uroot -p
 
+    exec : 실행
+    it : 실행시 인터렉션활성화(attach로 접속하는거와 같음)
+    fastapi-mysql : 컨테이너 이름
+    -uroot : u+id
+    -p : password
+
+
 # RDB 
     객체와 관계를 맵핑해주는 프로그램.
 
-    main.py
-    database.py : SQLAlchemy 설정
-    model.py : SQLAlchemy Models
-    schemas.py : Pydantic Models
+        main.py
+        database.py : SQLAlchemy 설정
+        model.py : SQLAlchemy Models
+        schemas.py : Pydantic Models
+
+    PyMySQL : MySQL연결을 위한 드라이버.
+
 
 # Form
     HTML의 태그.

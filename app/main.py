@@ -5,7 +5,7 @@ from typing import List
 from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 from . import models, schemas
-from app.database import SessionLocal, engine
+from .database import SessionLocal, engine
 
 models.Base.metadata.create_all(bind=engine)
   #DB에 model.py 테이블을 연동.
